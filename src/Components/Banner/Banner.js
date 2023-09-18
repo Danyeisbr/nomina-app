@@ -4,7 +4,7 @@ import Avatar from "../../Images/avatar.png";
 
 function Banner() {
   return (
-    <section className="fixed-top d-flex justify-content-between align-items-center bg-light w-100">
+    <section className="fixed-top d-flex justify-content-between align-items-center w-100" style={{backgroundColor: '#ccc'}}>
       <div className="d-flex align-items-center company-info">
         <img
           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
