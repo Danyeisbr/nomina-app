@@ -3,11 +3,16 @@
   justify-content: space-between;
   align-items: center;
   background-color: #ccd2d7;
+  /* z-index: 3; */
 }
 
 .company-info {
   display: flex;
   align-items: center;
+}
+
+.company-info img {
+  margin-left: 40px;
 }
 
 .company-logo {
@@ -28,4 +33,18 @@
 
 .user-avatar:hover {
   border-style: solid; 
+}
+
+.user-color {
+  color: #3834ec;
+}
+
+/* Estilo personalizado para cambiar el color al hacer hover con transición suave */
+.dropdown-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #3834ec;
+  color: white;
 }

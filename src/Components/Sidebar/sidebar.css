@@ -1,0 +1,29 @@
+/* Estilo tipo Dashboard para el Sidebar */
+#sidebar.active {
+  width: 100px;
+  /* transition: background-color 0.5s ease, color 0.5s ease; */
+}
+#toggle-btn {
+  color: #fff;
+  border-color: #fff;
+}
+
+  .w-13 {
+    width: 13%;
+  }
+
+  .mt-6 {
+    margin-top: 120px;
+  }
+
+  .dropdown-item {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #10489c;
+  }
+
+  .dropdown-toggle::after {
+    margin-left: 70px; /* Ajusta la cantidad de espacio entre el texto y la viñeta */
+  }

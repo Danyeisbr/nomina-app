@@ -1,27 +1,14 @@
-// Importa Bootstrap para acceder a sus variables
-@import "~bootstrap/scss/bootstrap";
-
 // Para cambiar la variable de tamaño de fuente base
-$font-size-base: 12px;
+$font-size-base: 0.75rem;
 
 // Define tus propias variables de colores
 $mi-color-primario: #3834ec; // Cambia el color según tus preferencias
 $mi-color-hover: #5d5de9; // Cambia el color hover según tus preferencias
 
+$primary: #3834ec; // Cambia el color primario
+
 // Compila Bootstrap con las nuevas variables
 @import "~bootstrap/scss/bootstrap";
-
-// Personaliza el estilo hover de todos los botones btn-primary
-.btn-primary {
-    background-color: $mi-color-primario;
-    border-color: $mi-color-primario; // Opcional: Cambia el color del borde si es necesario
-  
-    &:hover {
-      background-color: $mi-color-hover;
-      border-color: $mi-color-hover; // Opcional: Cambia el color del borde en hover si es necesario
-      // Puedes agregar otros estilos hover aquí si es necesario
-    }
-  }
 
 /* Estilos globales para las clases text-muted de Bootstrap */
 .text-muted {

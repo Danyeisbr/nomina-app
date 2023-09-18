@@ -99,7 +99,7 @@ function Login() {
                     {" "}
                     <button
                       type="submit"
-                      className="btn btn-primary rounded-pill mb-3"
+                      className="btn btn-primary rounded-pill mb-3 full-width-btn"
                     >
                       Iniciar sesión
                     </button>{" "}
