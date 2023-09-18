@@ -1,14 +1,20 @@
 import React from "react";
 import Banner from "../Banner/Banner";
 import Sidebar from "../Sidebar/Sidebar";
+import Home from "../Home/Home";
 
-function Layout({ children }) {
+function Layout() {
   return (
-    <div>
-      <Banner />
-      <div className="main-content">
-        <Sidebar />
-        {children}
+    <div className="container-fluid vh-100">
+      <div className="row gy-0">
+        <Banner />
+        <div
+          className="g-0 " //d-flex position-relative
+          //style={{ height: "50%" }}
+        >
+          <Sidebar />
+          <Home />
+        </div>
       </div>
     </div>
   );

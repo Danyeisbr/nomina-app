@@ -4,8 +4,8 @@ import Avatar from "../../Images/avatar.png";
 
 function Banner() {
   return (
-    <nav className="banner fixed-top">
-      <div className="company-info">
+    <section className="fixed-top d-flex justify-content-between align-items-center bg-light w-100">
+      <div className="d-flex align-items-center company-info">
         <img
           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
           alt="Logo de grupo alianza"
@@ -27,54 +27,49 @@ function Banner() {
           </h6>
         </div>
       </div>
-      <div className="dropdown">
-        <div
-          type="button"
-          id="dropdownMenuButton"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-          className="d-flex"
-        >
-          <img src={Avatar} alt="Avatar de usuario" className="user-avatar" />
-          <div className="row">
-            <div>
-              {" "}
-              <span className="fs-6 user-color fw-bold">
-                {" "}
-                Elías Gómez{" "}
-              </span>{" "}
-              <br />{" "}
-            </div>
-            <div>
-              {" "}
-              <span className="fs-6">Administrador</span>{" "}
-            </div>
+      <div className="dropdown"></div>
+      <div
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        className="d-flex"
+      >
+        <img src={Avatar} alt="Avatar de usuario" className="user-avatar" />
+        <div className="row">
+          <div>
+            {" "}
+            <h5 className="user-color fw-bold"> Elisa Gómez </h5>{" "}
+          </div>
+          <div>
+            {" "}
+            <h6 className="">Administradora</h6>{" "}
           </div>
         </div>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <li>
-            <a className="dropdown-item" href="#">
-              Perfil
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Configuraciones
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Soporte
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" href="#">
-              Salir
-            </a>
-          </li>
-        </ul>
       </div>
-    </nav>
+      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li>
+          <a className="dropdown-item" href="#">
+            Perfil
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="#">
+            Configuraciones
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="#">
+            Soporte
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="#">
+            Salir
+          </a>
+        </li>
+      </ul>
+    </section>
   );
 }
 

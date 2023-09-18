@@ -1,16 +1,3 @@
-.banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ccd2d7;
-  /* z-index: 3; */
-}
-
-.company-info {
-  display: flex;
-  align-items: center;
-}
-
 .company-info img {
   margin-left: 40px;
 }

@@ -1,0 +1,15 @@
+.bg-image {
+  background-size: 25% 55%;
+  background-image: url("../../Images/tech-life.png"); /* Ruta de la imagen de fondo */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-position: bottom 0px right 100px; /* Posiciona la imagen en la parte inferior derecha */
+}
+
+/* Estilo de hover */
+.icon-hover:hover {
+  color: white; /* Cambia el color del icono a blanco */
+  border-radius: 50%;
+  background-color: #ccc;
+  box-shadow: 0 0 0 15px #ccc; /* Agrega una sombra para crear el círculo gris claro */
+  opacity: 0.6;
+}
