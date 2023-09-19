@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/nomina-app/static/css/main.71d7bd76.css",
+    "main.js": "/nomina-app/static/js/main.858a9ed6.js",
+    "static/media/grupo-alianza.jpg": "/nomina-app/static/media/grupo-alianza.7ee3979ead68e52f436c.jpg",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/nomina-app/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/tech-life.png": "/nomina-app/static/media/tech-life.1ab15b3fd50e4f59df2f.png",
+    "static/media/fontawesome-webfont.eot": "/nomina-app/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/nomina-app/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/nomina-app/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/nomina-app/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/avatar.png": "/nomina-app/static/media/avatar.79c97ee6a0aa4624b08c.png",
+    "index.html": "/nomina-app/index.html",
+    "main.71d7bd76.css.map": "/nomina-app/static/css/main.71d7bd76.css.map",
+    "main.858a9ed6.js.map": "/nomina-app/static/js/main.858a9ed6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71d7bd76.css",
+    "static/js/main.858a9ed6.js"
+  ]
+}
