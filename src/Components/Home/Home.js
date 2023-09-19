@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import Employee from "../Employee/Employee";
+import NewEmployee from "../Employee/NewEmployee";
 import "./home.css";
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
     <section className="col-12 vh-100 d-flex justify-content-center align-items-start bg-image">
       <div className="row gy-5 mt-5">
         <div className="d-flex justify-content-center align-items-end">
-          <h3 className="mt-3">
+          <h3 className="mt-5">
             {" "}
             Bienvenida! <br />
             Elisa Gómez
@@ -45,7 +45,7 @@ function Home() {
                 }}
               />
             </button>
-            <Employee showModal={showModal} handleShowModal={handleShowModal} handleCloseModal={handleCloseModal} />
+            <NewEmployee showModal={showModal} handleShowModal={handleShowModal} handleCloseModal={handleCloseModal} />
             <p className="fw-normal">Empieza aquí</p>
           </div>
         </div>

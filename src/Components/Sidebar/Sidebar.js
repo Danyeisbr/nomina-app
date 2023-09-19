@@ -31,7 +31,6 @@ const Sidebar = () => {
         className="d-flex justify-content-center mt-5"
         style={{ height: "110px" }}
       >
-        {/* <div className="col d-flex justify-content-center"> */}
           <button
             className="btn text-white fs-2"
             id="toggle-btn"
@@ -39,7 +38,6 @@ const Sidebar = () => {
           >
             ☰
           </button>
-        {/* </div> */}
       </div>
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="collapse navbar-collapse" id="navbarNav">

@@ -1,11 +1,16 @@
 import React from "react";
-import './employee.css';
+import { Link } from "react-router-dom";
+import "./new-employee.css";
 
-function Employee({ showModal, handleCloseModal }) {
+function NewEmployee({ showModal, handleCloseModal }) {
   return (
     <>
       {showModal && (
-        <div className="modal d-flex align-items-center justify-content-center" tabIndex="-1" style={{ display: 'block', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
+        <div
+          className="modal d-flex align-items-center justify-content-center"
+          tabIndex="-1"
+          style={{ display: "block", backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+        >
           <div className="modal-dialog w-50">
             <div className="modal-content">
               <div className="modal-header shadow p-3 mb-4 bg-body-tertiary rounded">
@@ -82,7 +87,10 @@ function Employee({ showModal, handleCloseModal }) {
                       <label htmlFor="departamento" className="form-label ">
                         Departamento
                       </label>
-                      <select className="form-select rounded-pill" id="departamento">
+                      <select
+                        className="form-select rounded-pill"
+                        id="departamento"
+                      >
                         <option>Selecciona un departamento</option>
                         <option>Departamento 1</option>
                         <option>Departamento 2</option>
@@ -92,7 +100,10 @@ function Employee({ showModal, handleCloseModal }) {
                   </div>
                 </form>
               </div>
-              <div className="modal-footer border-0 d-flex justify-content-center" style={{ backgroundColor: 'white' }}>
+              <div
+                className="modal-footer border-0 d-flex justify-content-center"
+                style={{ backgroundColor: "white" }}
+              >
                 <button
                   type="button"
                   className="btn btn-secondary rounded-pill btn-hover fw-bold"
@@ -100,9 +111,14 @@ function Employee({ showModal, handleCloseModal }) {
                 >
                   Cancelar
                 </button>
-                <button type="button" className="btn btn-primary rounded-pill fw-bold">
-                  Guardar
-                </button>
+                <Link to="/employees">
+                  <button
+                    type="button"
+                    className="btn btn-primary rounded-pill fw-bold"
+                  >
+                    Guardar
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -112,4 +128,4 @@ function Employee({ showModal, handleCloseModal }) {
   );
 }
 
-export default Employee;
+export default NewEmployee;

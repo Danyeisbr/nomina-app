@@ -20,6 +20,8 @@
     background-color: #10489c;
   }
 
+  
   .dropdown-toggle::after {
     margin-left: 80px; /* Ajusta la cantidad de espacio entre el texto y la viñeta */
   }
+  

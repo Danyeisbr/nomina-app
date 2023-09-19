@@ -1,0 +1,107 @@
+.ml-13 {
+    margin-left: 13%;
+} 
+
+.w-87 {
+    width: 87%;
+}
+
+.text-color {
+    color: #3834ec;
+  }
+
+  .btn-hover:hover {
+    background-color: #ccc;
+    border-color: #ccc;
+    color: #3834ec;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    flex: 1;
+    padding-left: 30px; /* Espacio para el ícono en el lado izquierdo */
+    font-family: 'FontAwesome', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 36px;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 5px; /* Ajusta la posición del ícono a la izquierda */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px; /* Tamaño del ícono */
+    color: #999; /* Color del ícono */
+  }
+
+  /* Estilo para el espacio entre las filas */
+.table-row {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para redondear los bordes de las filas al hacer hover */
+  .table-row:hover {
+    border-radius: 10px;
+  }
+  
+  /* Estilo para el fondo de la fila al hacer hover */
+  .table-row:hover td {
+    background-color: #f0f0f0; /* Cambia esto al color que desees */
+  }
+  
+  /* Estilo para los encabezados de columna */
+  th {
+    background-color: #f2f2f2; /* Color de fondo de los encabezados */
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Estilo para los íconos en los encabezados */
+  th label {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Estilo para los íconos de búsqueda en los inputs */
+  .input-group-text .fa-search {
+    color: #555; /* Cambia esto al color que desees */
+  }
+  
+  /* Estilo para los íconos de búsqueda en los inputs al hacer hover */
+  .input-group-text .fa-search:hover {
+    color: #333; /* Cambia esto al color que desees */
+  }
+  
+
+  /* Estilo para eliminar los bordes de la paginación */
+.pagination-borderless .page-item {
+  border: none;
+}
+
+/* Estilo para los números de la paginación */
+.pagination-borderless .page-link {
+  background-color: transparent; /* Fondo transparente */
+  color: #333; /* Color de texto deseado */
+  border: none; /* Borde nulo */
+  margin: 0 2px; /* Espaciado entre números */
+  padding: 0; /* Sin relleno */
+  border-radius: 50%; /* Forma de círculo */
+  width: 32px; /* Ancho del número */
+  height: 32px; /* Altura del número */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease; /* Transición para el color de fondo al hacer hover */
+}
+
+/* Estilo para el círculo de color gris claro al hacer hover */
+.pagination-borderless .page-link:hover {
+  background-color: #f0f0f0; /* Color gris claro al hacer hover */
+  color: #333; /* Color de texto deseado */
+}
