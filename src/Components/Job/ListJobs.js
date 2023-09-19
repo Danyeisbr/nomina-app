@@ -12,23 +12,24 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 // Datos de prueba para las filas de la tabla
-import { employeesData } from "./employeesData"; //
-import "./list-employees.css";
+import { jobsData } from "./jobsData"; //
+import "../Employee/list-employees.css";
 
-function ListEmployees() {
+function ListJobs() {
   return (
     <section className="d-flex flex-column justify-content-start vh-100 ml-13">
       <div>
         <div className="d-flex align-items-center mt-5 p-3">
           <Link to="/home">
+            {" "}
             <FontAwesomeIcon
               icon={faArrowLeft}
               size="lg"
               className="me-2 mt-4"
               style={{ color: "#3834ec" }}
-            />
+            />{" "}
           </Link>
-          <h2 className="mt-4 mb-0">Empleados</h2>
+          <h2 className="mt-4 mb-0">Cargos</h2>
         </div>
       </div>
       <div>
@@ -86,31 +87,29 @@ function ListEmployees() {
               </th>
               <th scope="col">
                 <label htmlFor="direccion">
-                  Dirección{" "}
-                  <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
+                  Area <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
                 </label>
                 <input
                   type="text"
-                  id="direccion"
+                  id="area"
                   className="form-control"
                   placeholder="&#xf002; Buscar"
                 />
               </th>
               <th scope="col">
                 <label htmlFor="telefono">
-                  Teléfono{" "}
-                  <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
+                  Cargo <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
                 </label>
                 <input
                   type="text"
-                  id="telefono"
+                  id="cargo"
                   className="form-control"
                   placeholder="&#xf002; Buscar"
                 />
               </th>
               <th scope="col">
                 <label htmlFor="ciudad">
-                  Ciudad <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
+                  Rol <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
                 </label>
                 <input
                   type="text"
@@ -121,8 +120,7 @@ function ListEmployees() {
               </th>
               <th scope="col">
                 <label htmlFor="departamento">
-                  Departamento{" "}
-                  <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
+                  Jefe <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
                 </label>
                 <input
                   type="text"
@@ -139,7 +137,7 @@ function ListEmployees() {
             </tr>
           </thead>
           <tbody>
-            {employeesData.map((employee) => (
+            {jobsData.map((employee) => (
               <tr key={employee.id} className="table-row">
                 <td>
                   <div className="d-flex justify-content-center align-items-center">
@@ -152,10 +150,10 @@ function ListEmployees() {
                 </td>
                 <td>{employee.nombre}</td>
                 <td>{employee.identificacion}</td>
-                <td>{employee.direccion}</td>
-                <td>{employee.telefono}</td>
-                <td>{employee.ciudad}</td>
-                <td>{employee.departamento}</td>
+                <td>{employee.area}</td>
+                <td>{employee.cargo}</td>
+                <td>{employee.rol}</td>
+                <td>{employee.jefe}</td>
                 <td>
                   <div className="d-flex justify-content-center">
                     <button className="btn btn-link">
@@ -247,4 +245,4 @@ function ListEmployees() {
   );
 }
 
-export default ListEmployees;
+export default ListJobs;

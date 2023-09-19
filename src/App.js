@@ -4,6 +4,7 @@ import Login from "./Components/Login/Login";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Components/Home/Home";
 import ListEmployees from "./Components/Employee/ListEmployees";
+import ListJobs from "./Components/Job/ListJobs";
 
 const App = () => {
   return (
@@ -19,6 +20,11 @@ const App = () => {
         <Route path="/employees">
           <Layout>
             <ListEmployees />
+          </Layout>
+        </Route>
+        <Route path="/jobs">
+          <Layout>
+            <ListJobs />
           </Layout>
         </Route>
       </Switch>
