@@ -5,10 +5,7 @@ import Avatar from "../../Images/avatar.png";
 
 function Banner() {
   return (
-    <section
-      className="fixed-top d-flex justify-content-between align-items-center w-100"
-      style={{ backgroundColor: "#ccc" }}
-    >
+    <section className="fixed-top d-flex justify-content-between align-items-center w-100 custom-banner">
       <div className="d-flex align-items-center company-info">
         <img
           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
@@ -16,19 +13,10 @@ function Banner() {
           className="company-logo"
         />
         <div className="col g-0">
-          <h6 className="company-name">
-            <span
-              style={{
-                fontWeight: "normal",
-                letterSpacing: "4px",
-                fontFamily: "Inter, sans-serif",
-              }}
-            >
-              {" "}
-              Psico{" "}
-            </span>{" "}
+          <h4>
+            <span className="custom-span ls-4 fw-normal">Psico</span>
             <br /> <strong>Alianza</strong>
-          </h6>
+          </h4>
         </div>
       </div>
       <div className="dropdown"></div>

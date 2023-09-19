@@ -11,6 +11,11 @@
   background-size: cover;
 }
 
+.custom-h1 {
+  letter-spacing: 8px;
+  font-family: Inter, sans-serif;
+}
+
 .w-90 {
   width: 90%;
 }

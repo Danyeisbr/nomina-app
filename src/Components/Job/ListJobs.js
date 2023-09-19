@@ -25,9 +25,8 @@ function ListJobs() {
             <FontAwesomeIcon
               icon={faArrowLeft}
               size="lg"
-              className="me-2 mt-4"
-              style={{ color: "#3834ec" }}
-            />{" "}
+              className="me-2 mt-4 text-color"
+            />
           </Link>
           <h2 className="mt-4 mb-0">Cargos</h2>
         </div>
@@ -188,47 +187,27 @@ function ListJobs() {
                 </a>
               </li>
               <li className="page-item">
-                <a
-                  className="page-link fw-bold"
-                  href="#"
-                  style={{ color: "#3834ec" }}
-                >
+                <a className="page-link fw-bold" href="#">
                   1
                 </a>
               </li>
               <li className="page-item">
-                <a
-                  className="page-link fw-bold"
-                  href="#"
-                  style={{ color: "#3834ec" }}
-                >
+                <a className="page-link fw-bold" href="#">
                   2
                 </a>
               </li>
               <li className="page-item">
-                <a
-                  className="page-link fw-bold"
-                  href="#"
-                  style={{ color: "#3834ec" }}
-                >
+                <a className="page-link fw-bold" href="#">
                   3
                 </a>
               </li>
               <li className="page-item">
-                <a
-                  className="page-link fw-bold"
-                  href="#"
-                  style={{ color: "#3834ec" }}
-                >
+                <a className="page-link fw-bold" href="#">
                   4
                 </a>
               </li>
               <li className="page-item">
-                <a
-                  className="page-link fw-bold"
-                  href="#"
-                  style={{ color: "#3834ec" }}
-                >
+                <a className="page-link fw-bold" href="#">
                   5
                 </a>
               </li>

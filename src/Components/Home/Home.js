@@ -40,9 +40,6 @@ function Home() {
               <FontAwesomeIcon
                 icon={faUserPlus}
                 size="3x"
-                style={{
-                  transition: "color 0.2s",
-                }}
               />
             </button>
             <NewEmployee showModal={showModal} handleShowModal={handleShowModal} handleCloseModal={handleCloseModal} />

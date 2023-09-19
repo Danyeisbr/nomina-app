@@ -7,9 +7,8 @@ function NewEmployee({ showModal, handleCloseModal }) {
     <>
       {showModal && (
         <div
-          className="modal d-flex align-items-center justify-content-center"
+          className="modal d-flex align-items-center justify-content-center custom-modal"
           tabIndex="-1"
-          style={{ display: "block", backgroundColor: "rgba(0, 0, 0, 0.5)" }}
         >
           <div className="modal-dialog w-50">
             <div className="modal-content">

@@ -87,7 +87,7 @@
 /* Estilo para los números de la paginación */
 .pagination-borderless .page-link {
   background-color: transparent; /* Fondo transparente */
-  color: #333; /* Color de texto deseado */
+  color: #3834ec; /* Color de texto deseado */
   border: none; /* Borde nulo */
   margin: 0 2px; /* Espaciado entre números */
   padding: 0; /* Sin relleno */
@@ -103,5 +103,5 @@
 /* Estilo para el círculo de color gris claro al hacer hover */
 .pagination-borderless .page-link:hover {
   background-color: #f0f0f0; /* Color gris claro al hacer hover */
-  color: #333; /* Color de texto deseado */
+  color: #3834ec; /* Color de texto deseado */
 }

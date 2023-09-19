@@ -4,24 +4,26 @@
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-  .w-13 {
-    width: 13%;
-  }
+.h-18 {
+  height: 18%;
+}
 
-  .mt-6 {
-    margin-top: 65px;
-  }
+.w-13 {
+  width: 13%;
+}
 
-  .dropdown-item {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #10489c;
-  }
+.mt-6 {
+  margin-top: 65px;
+}
 
-  
-  .dropdown-toggle::after {
-    margin-left: 80px; /* Ajusta la cantidad de espacio entre el texto y la viñeta */
-  }
-  
+.dropdown-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #10489c;
+}
+
+.dropdown-toggle::after {
+  margin-left: 80px; /* Ajusta la cantidad de espacio entre el texto y la viñeta */
+}

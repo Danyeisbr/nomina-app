@@ -9,22 +9,13 @@ function Login() {
           <section className="d-flex flex-column justify-content-end h-100">
             <article className="text-white mx-md-5 p-md-5">
               <h3 className="px-4">
-                <span
-                  style={{
-                    fontWeight: "normal",
-                  }}
-                >
+                <span className="fw-normal">
                   Bienvenido a la mejor plataforma
                 </span>{" "}
                 <br />
                 <strong>organizacional online</strong>
               </h3>
-              <h4
-                className="px-4 py-5 mb-3"
-                style={{
-                  fontWeight: "normal",
-                }}
-              >
+              <h4 className="fw-normal px-4 py-5 mb-3">
                 Gestión efectiva del talento humano
               </h4>
             </article>
@@ -37,23 +28,14 @@ function Login() {
               <figure className="col d-flex justify-content-end g-0">
                 <img
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                  style={{ width: "110px", height: "140px" }}
+                  style={{ width: "110px", height: "130px" }}
                   alt="Logo de grupo alianza"
                 />
               </figure>
               {/* Nombre de la compañía */}
               <div className="col g-0">
                 <h1>
-                  <span
-                    style={{
-                      fontWeight: "normal",
-                      letterSpacing: "9px",
-                      fontFamily: "Inter, sans-serif",
-                    }}
-                  >
-                    {" "}
-                    Psico{" "}
-                  </span>{" "}
+                  <span className="fw-normal custom-h1">Psico</span>
                   <br /> <strong>Alianza</strong>
                 </h1>
               </div>

@@ -28,10 +28,7 @@ const Sidebar = () => {
         sidebarActive ? "active" : ""
       }`}
     >
-      <div
-        className="d-flex justify-content-center mt-5"
-        style={{ height: "110px" }}
-      >
+      <div className="d-flex justify-content-center mt-5 h-18">
         <button
           className="btn text-white fs-2"
           id="toggle-btn"
@@ -44,25 +41,23 @@ const Sidebar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav flex-column m-3 w-100" id="menu">
             <li className="nav-item">
-              <a
-                className="nav-link active fs-4 ms-2"
-                aria-current="page"
-                href="#"
-              >
-                {showText ? (
-                  // <Link to="/home" style={{textDecoration: 'none'}}>
-                  <span className="text-center">Home</span>
-                ) : (
-                  // </Link>
-                  // <Link to="/home">
+              {showText ? (
+                <Link to="/home">
+                  <button className="btn fs-4 btn-primary bg-transparent border border-0">
+                    Home
+                  </button>
+                </Link>
+              ) : (
+                <Link to="/home">
+                  <button className="btn fs-4 btn-primary bg-transparent border border-0">
                     <i className="fa fa-home fa-2x"></i>
-                  // </Link>
-                )}
-              </a>
+                  </button>
+                </Link>
+              )}
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link dropdown-toggle active fs-4 w-100 mt-4 ms-2"
+                className="nav-link dropdown-toggle active fs-4 w-100 mt-4 ms-1"
                 href="#submenu"
                 role="button"
                 data-bs-toggle="dropdown"
