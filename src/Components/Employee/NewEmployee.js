@@ -10,7 +10,7 @@ function NewEmployee({ showModal, handleCloseModal }) {
           className="modal d-flex align-items-center justify-content-center custom-modal"
           tabIndex="-1"
         >
-          <div className="modal-dialog w-50">
+          <div className="modal-dialog modal-dialog-centered modal-lg w-50">
             <div className="modal-content">
               <div className="modal-header shadow p-3 mb-4 bg-body-tertiary rounded">
                 <h5 className="modal-title fw-light">Nuevo Empleado</h5>
@@ -23,7 +23,7 @@ function NewEmployee({ showModal, handleCloseModal }) {
               <div className="modal-body">
                 <form>
                   <div className="row mb-3">
-                    <div className="col">
+                    <div className="col-md-12 col-lg-6">
                       <label htmlFor="nombres" className="form-label">
                         Nombres
                       </label>
@@ -34,7 +34,7 @@ function NewEmployee({ showModal, handleCloseModal }) {
                         placeholder="Escribe el nombre de tu empleado"
                       />
                     </div>
-                    <div className="col">
+                    <div className="col-md-12 col-lg-6">
                       <label htmlFor="apellidos" className="form-label">
                         Apellidos
                       </label>
@@ -47,7 +47,7 @@ function NewEmployee({ showModal, handleCloseModal }) {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col">
+                    <div className="col-md-12 col-lg-6">
                       <label htmlFor="identificacion" className="form-label">
                         Identificación
                       </label>
@@ -55,10 +55,10 @@ function NewEmployee({ showModal, handleCloseModal }) {
                         type="number"
                         className="form-control rounded-pill"
                         id="identificacion"
-                        placeholder="Escribe un numero de identificación"
+                        placeholder="Escribe un número de identificación"
                       />
                     </div>
-                    <div className="col">
+                    <div className="col-md-12 col-lg-6">
                       <label htmlFor="telefono" className="form-label">
                         Teléfono
                       </label>
@@ -71,7 +71,7 @@ function NewEmployee({ showModal, handleCloseModal }) {
                     </div>
                   </div>
                   <div className="row mb-3">
-                    <div className="col">
+                    <div className="col-md-12 col-lg-6">
                       <label htmlFor="ciudad" className="form-label">
                         Ciudad
                       </label>
@@ -82,8 +82,8 @@ function NewEmployee({ showModal, handleCloseModal }) {
                         <option>Ciudad 3</option>
                       </select>
                     </div>
-                    <div className="col">
-                      <label htmlFor="departamento" className="form-label ">
+                    <div className="col-md-12 col-lg-6">
+                      <label htmlFor="departamento" className="form-label">
                         Departamento
                       </label>
                       <select
