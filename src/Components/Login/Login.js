@@ -3,9 +3,9 @@ import "./login.css";
 
 function Login() {
   return (
-    <div className="container-fluid">
+    <section className="container-fluid">
       <div className="row">
-        <section className="col-left min-vh-100 g-0 gradient-custom">
+        <section className="col-left col-lg-6 col-md-6 col-sm-12 min-vh-100 gradient-custom">
           <section className="d-flex flex-column justify-content-end h-100">
             <article className="text-white mx-md-5 p-md-5">
               <h3 className="px-4">
@@ -21,11 +21,11 @@ function Login() {
             </article>
           </section>
         </section>
-        <section className="col-right d-flex justify-content-center min-vh-100">
+        <section className="col-right col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center min-vh-100">
           <header className="d-flex flex-column align-items-center justify-content-start w-75 mt-5">
             <article className="row d-flex align-items-center">
               {/* Logo de la compañía */}
-              <figure className="col d-flex justify-content-end g-0">
+              <figure className="col-6 d-flex justify-content-end">
                 <img
                   src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
                   style={{ width: "110px", height: "130px" }}
@@ -33,7 +33,7 @@ function Login() {
                 />
               </figure>
               {/* Nombre de la compañía */}
-              <div className="col g-0">
+              <div className="col-6 g-0">
                 <h1>
                   <span className="fw-normal custom-h1">Psico</span>
                   <br /> <strong>Alianza</strong>
@@ -41,7 +41,7 @@ function Login() {
               </div>
             </article>
             <article className="row d-flex justify-content-center w-90 mt-4">
-              <form>
+              <form className="w-100">
                 <div className="form-group mb-3">
                   <label htmlFor="exampleInputUser" className="py-2">
                     Usuario
@@ -49,6 +49,7 @@ function Login() {
                   <input
                     type="text"
                     className="form-control rounded-pill"
+                    id="exampleInputUser"
                     placeholder="Pruebadesarrollador"
                   />
                 </div>
@@ -76,21 +77,24 @@ function Login() {
                     Recordar cuenta
                   </label>
                 </div>
-                <div className="row g-0">
-                  <Link to="/home">
-                    {" "}
-                    <button
-                      type="submit"
-                      className="btn btn-primary rounded-pill mb-3 full-width-btn"
-                    >
-                      Iniciar sesión
-                    </button>{" "}
-                  </Link>
+                <div className="row">
+                  <div className="col-12">
+                    <Link to="/home">
+                      {" "}
+                      <button
+                        type="submit"
+                        className="btn btn-primary rounded-pill mb-3 w-100"
+                      >
+                        Iniciar sesión
+                      </button>{" "}
+                    </Link>
+                  </div>
+
                   <div className="col-6">
                     <p className="text-muted">¿Olvidaste tu usuario?</p>
                   </div>
-                  <div className="col-6">
-                    <p className="text-muted text-end">
+                  <div className="col-6 text-end">
+                    <p className="text-muted">
                       ¿Olvidaste tu contraseña?{" "}
                     </p>
                   </div>
@@ -100,7 +104,7 @@ function Login() {
           </header>
         </section>
       </div>
-    </div>
+    </section>
   );
 }
 

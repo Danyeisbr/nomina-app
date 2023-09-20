@@ -1,7 +1,6 @@
 /* Estilo tipo Dashboard para el Sidebar */
 #sidebar.active {
   width: 95px;
-  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .h-18 {
@@ -10,6 +9,10 @@
 
 .w-13 {
   width: 13%;
+}
+
+.w-8{
+  width: 38%;
 }
 
 .mt-6 {
@@ -24,6 +27,7 @@
   background-color: #10489c;
 }
 
+/* Oculta la flecha por defecto que tiene el dropdown en el elemento .dropdown-toggle */
 .dropdown-toggle::after {
-  margin-left: 80px; /* Ajusta la cantidad de espacio entre el texto y la viñeta */
+  content: none;
 }

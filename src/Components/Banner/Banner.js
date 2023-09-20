@@ -56,10 +56,8 @@ function Banner() {
           </a>
         </li>
         <li>
-          <Link to="/" style={{ textDecoration: "none" }}>
-            <a className="dropdown-item" href="#">
-              Salir
-            </a>
+          <Link to="/" className="dropdown-item">
+            Salir
           </Link>
         </li>
       </ul>
