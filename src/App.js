@@ -8,7 +8,7 @@ import ListJobs from "./Components/Job/ListJobs";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/" exact component={Login} />{" "}
         <Route path="/home">
