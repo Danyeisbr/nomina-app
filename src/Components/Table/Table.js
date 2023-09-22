@@ -123,13 +123,6 @@ function Table({ data, titleButtonDelete, itemButtonDelete, fields }) {
                       className="text-primary"
                     />
                   </button>
-                  <NewForm
-                    showModal={showModal}
-                    handleCloseModal={handleCloseModal}
-                    title="Editar"
-                    fields={fields}
-                    colorHeader="bg-primary text-white"
-                  />
 
                   <button className="btn btn-link" onClick={handleShowDelete}>
                     <FontAwesomeIcon
@@ -144,6 +137,13 @@ function Table({ data, titleButtonDelete, itemButtonDelete, fields }) {
           ))}
         </tbody>
       </table>
+      <NewForm
+        showModal={showModal}
+        handleCloseModal={handleCloseModal}
+        title="Editar"
+        fields={fields}
+        colorHeader="bg-primary text-white"
+      />
       <Delete
         title={titleButtonDelete}
         item={itemButtonDelete}
