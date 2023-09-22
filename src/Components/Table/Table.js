@@ -138,19 +138,18 @@ function Table({ data, titleButtonDelete, itemButtonDelete, fields }) {
                       className="text-primary"
                     />
                   </button>
-                  <Delete
-                    title={titleButtonDelete}
-                    item={itemButtonDelete}
-                    show={showDelete}
-                    onHide={handleCloseDelete}
-                    // onConfirm={handleConfirmDelete}
-                  />
                 </div>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <Delete
+        title={titleButtonDelete}
+        item={itemButtonDelete}
+        show={showDelete}
+        onHide={handleCloseDelete}
+      />
       <div className="d-flex justify-content-between">
         <div>
           <select className="form-select form-select-sm border border-0">
