@@ -1,47 +1,5 @@
-.ml-13 {
-    margin-left: 13%;
-} 
-
-.w-87 {
-    width: 87%;
-}
-
-.text-color {
-    color: #3834ec;
-  }
-
-  .btn-hover:hover {
-    background-color: #ccc;
-    border-color: #ccc;
-    color: #3834ec;
-}
-
-.input-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .input {
-    flex: 1;
-    padding-left: 30px; /* Espacio para el ícono en el lado izquierdo */
-    font-family: 'FontAwesome', sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    height: 36px;
-  }
-  
-  .input-icon {
-    position: absolute;
-    left: 5px; /* Ajusta la posición del ícono a la izquierda */
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px; /* Tamaño del ícono */
-    color: #999; /* Color del ícono */
-  }
-
   /* Estilo para el espacio entre las filas */
-.table-row {
+  .table-row {
     margin-bottom: 15px;
   }
   
@@ -104,4 +62,20 @@
 .pagination-borderless .page-link:hover {
   background-color: #f0f0f0; /* Color gris claro al hacer hover */
   color: #3834ec; /* Color de texto deseado */
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input {
+  padding-right: 30px; /* Ajusta el valor según el tamaño de tu icono */
+}
+
+.input-container .icon {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Ajusta la posición según tus necesidades */
+  transform: translateY(-50%);
+  color: #555; /* Cambia el color según tu diseño */
 }

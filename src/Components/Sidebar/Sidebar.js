@@ -4,7 +4,7 @@ import "font-awesome/css/font-awesome.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import "./sidebar.css";
+import "./Sidebar.css";
 
 const Sidebar = () => {
   // Función para colapsar o expandir la barra lateral

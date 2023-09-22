@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./banner.css";
+import "./Banner.css";
 import Avatar from "../../Images/avatar.png";
 
 function Banner() {

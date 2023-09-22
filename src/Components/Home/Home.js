@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import NewEmployee from "../Employee/NewEmployee";
-import "./home.css";
+import NewForm from "../Form/NewForm";
+import {fieldsForEmployee} from '../../Data/DataFormEmployee';
+import "./Home.css";
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -37,12 +38,15 @@ function Home() {
               className="btn mt-4 mb-3 icon-hover"
               onClick={handleShowModal}
             >
-              <FontAwesomeIcon
-                icon={faUserPlus}
-                size="3x"
-              />
+              <FontAwesomeIcon icon={faUserPlus} size="3x" />
             </button>
-            <NewEmployee showModal={showModal} handleShowModal={handleShowModal} handleCloseModal={handleCloseModal} />
+            <NewForm
+              showModal={showModal}
+              handleShowModal={handleShowModal}
+              handleCloseModal={handleCloseModal}
+              title="Nuevo Empleado"
+              fields={fieldsForEmployee}
+            />
             <p className="fw-normal">Empieza aquí</p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,16 +6,36 @@ import {
   faTrash,
   faDownload,
   faUserPlus,
-  faEdit,
-  faAngleDown,
-  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import NewForm from "../Form/NewForm";
+import Delete from "../Button/Delete";
+import { fieldsForJob } from "../../Data/DataFormJob";
+import Table from "../Table/Table";
 
-// Datos de prueba para las filas de la tabla
-import { jobsData } from "./jobsData"; //
-import "../Employee/list-employees.css";
+// Datos de cargos para las filas de la tabla
+import { JobsData } from "../../Data/JobsData"; //
+import "../Employee/ListEmployees.css";
 
 function ListJobs() {
+  const [showModal, setShowModal] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleShowDelete = () => {
+    setShowDelete(true);
+  };
+
+  const handleCloseDelete = () => {
+    setShowDelete(false);
+  };
+
   return (
     <section className="d-flex flex-column justify-content-start vh-100 ml-13">
       <div>
@@ -33,193 +53,47 @@ function ListJobs() {
       </div>
       <div>
         <div className="mt-1 ms-4 p-2">
-          <button className="btn btn-md rounded-pill border border-0 me-2 btn-hover text-color fw-bold">
+          <button
+            className="btn btn-md rounded-pill border border-0 me-2 btn-hover text-color fw-bold"
+            onClick={handleShowDelete}
+          >
             <FontAwesomeIcon icon={faTrash} className="me-1" />
             Borrar selección
           </button>
+          <Delete
+            title="Cargo"
+            item="el cargo de community manager"
+            show={showDelete}
+            onHide={handleCloseDelete}
+            // onConfirm={handleConfirmDelete}
+          />
           <button className="btn btn-md rounded-pill border border-0 btn-hover text-color fw-bold">
             <FontAwesomeIcon icon={faDownload} className="me-1" />
             Descargar datos
           </button>
-          <button className="btn btn-md rounded-pill border border-2 me-4 btn-hover text-color fw-bold float-end">
+          <button
+            className="btn btn-md rounded-pill border border-2 me-4 btn-hover text-color fw-bold float-end"
+            onClick={handleShowModal}
+          >
             <FontAwesomeIcon icon={faUserPlus} className="me-1" />
             Agregar
           </button>
+          {/* Uso el operador de propagacion para enviar las propiedades al componente NewForm */}
+          <NewForm
+            showModal={showModal}
+            handleCloseModal={handleCloseModal}
+            fields={fieldsForJob}
+            title="Nuevo Cargo"
+            colorHeader="bg-body-tertiary"
+          />
         </div>
       </div>
-      <div className="container h-100">
-        <table className="table table-hover table-borderless mt-2">
-          <thead className="table-light">
-            <tr>
-              <th scope="col" className="">
-                <div className="d-flex justify-content-center align-items-center">
-                  <span className="m-1 p-2">Todos</span>
-                  <input
-                    type="checkbox"
-                    aria-label="Seleccionar todos"
-                    className="float-end"
-                  />
-                </div>
-              </th>
-              <th scope="col">
-                <label htmlFor="nombre">
-                  Nombre <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
-                </label>
-                <input
-                  type="text"
-                  id="nombre"
-                  className="form-control"
-                  placeholder="&#xf002; Buscar"
-                />
-              </th>
-              <th scope="col">
-                <label htmlFor="identificacion">
-                  Identificación{" "}
-                  <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
-                </label>
-                <input
-                  type="text"
-                  id="identificacion"
-                  className="form-control"
-                  placeholder="&#xf002; Buscar"
-                />
-              </th>
-              <th scope="col">
-                <label htmlFor="direccion">
-                  Area <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
-                </label>
-                <input
-                  type="text"
-                  id="area"
-                  className="form-control"
-                  placeholder="&#xf002; Buscar"
-                />
-              </th>
-              <th scope="col">
-                <label htmlFor="telefono">
-                  Cargo <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
-                </label>
-                <input
-                  type="text"
-                  id="cargo"
-                  className="form-control"
-                  placeholder="&#xf002; Buscar"
-                />
-              </th>
-              <th scope="col">
-                <label htmlFor="ciudad">
-                  Rol <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
-                </label>
-                <input
-                  type="text"
-                  id="ciudad"
-                  className="form-control"
-                  placeholder="&#xf002; Buscar"
-                />
-              </th>
-              <th scope="col">
-                <label htmlFor="departamento">
-                  Jefe <FontAwesomeIcon icon={faAngleDown} className="ms-1" />
-                </label>
-                <input
-                  type="text"
-                  id="departamento"
-                  className="form-control"
-                  placeholder="&#xf002; Buscar"
-                />
-              </th>
-              <th scope="col" className="">
-                <div className="d-flex justify-content-center align-items-center">
-                  <span className="m-1 p-2">Acciones</span>
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {jobsData.map((employee) => (
-              <tr key={employee.id} className="table-row">
-                <td>
-                  <div className="d-flex justify-content-center align-items-center">
-                    <input
-                      type="checkbox"
-                      aria-label="Seleccionar"
-                      className="text-center"
-                    />
-                  </div>
-                </td>
-                <td>{employee.nombre}</td>
-                <td>{employee.identificacion}</td>
-                <td>{employee.area}</td>
-                <td>{employee.cargo}</td>
-                <td>{employee.rol}</td>
-                <td>{employee.jefe}</td>
-                <td>
-                  <div className="d-flex justify-content-center">
-                    <button className="btn btn-link">
-                      <FontAwesomeIcon icon={faEdit} className="text-primary" />
-                    </button>
-                    <button className="btn btn-link">
-                      <FontAwesomeIcon
-                        icon={faTrash}
-                        className="text-primary"
-                      />
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <div className="d-flex justify-content-between">
-          <div>
-            <select className="form-select form-select-sm border border-0">
-              <option>Mostrar de a 10</option>
-              <option>Mostrar de a 30</option>
-              <option>Mostrar de a 50</option>
-            </select>
-          </div>
-          <nav aria-label="Page navigation">
-            <ul className="pagination pagination-borderless">
-              <li className="page-item">
-                <a className="page-link fw-bold" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link fw-bold" href="#">
-                  1
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link fw-bold" href="#">
-                  2
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link fw-bold" href="#">
-                  3
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link fw-bold" href="#">
-                  4
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link fw-bold" href="#">
-                  5
-                </a>
-              </li>
-              <li className="page-item">
-                <a className="page-link fw-bold" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <Table
+        data={JobsData}
+        titleButtonDelete="Cargo"
+        itemButtonDelete="el cargo de community manager"
+        fields={fieldsForJob}
+      />
     </section>
   );
 }

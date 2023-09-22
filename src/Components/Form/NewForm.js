@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./new-form.css";
+import "./NewForm.css";
 
-function NewForm({ showModal, handleCloseModal, title, fields }) {
+function NewForm({ showModal, handleCloseModal, title, fields, colorHeader }) {
   return (
     <>
       {showModal && (
@@ -12,7 +12,9 @@ function NewForm({ showModal, handleCloseModal, title, fields }) {
         >
           <div className="modal-dialog modal-dialog-centered modal-lg w-50">
             <div className="modal-content">
-              <div className="modal-header shadow p-3 mb-4 bg-body-tertiary rounded">
+              <div
+                className={`modal-header shadow p-3 mb-4 rounded ${colorHeader}`}
+              >
                 <h5 className="modal-title fw-light">{title}</h5>
                 <button
                   type="button"
@@ -22,21 +24,38 @@ function NewForm({ showModal, handleCloseModal, title, fields }) {
               </div>
               <div className="modal-body">
                 <form>
-                {fields.map((field, index) => (
-                    <div className="row mb-3 bg-" key={index}>
-                      <div className="col-md-12 col-lg-6">
+                  <div className="row">
+                    {fields.map((field, index) => (
+                      <div className="col-md-12 col-lg-6 mb-3" key={index}>
                         <label htmlFor={field.name} className="form-label">
                           {field.label}
                         </label>
-                        <input
-                          type={field.type}
-                          className="form-control rounded-pill"
-                          id={field.name}
-                          placeholder={`Escribe ${field.label.toLowerCase()}`}
-                        />
+                        {field.type === "select" ? (
+                          <select
+                            className="form-select rounded-pill"
+                            id={field.name}
+                          >
+                            <option>
+                              Selecciona {field.label.toLowerCase()}
+                            </option>
+                            <option>
+                              Selecciona {field.label.toLowerCase()}
+                            </option>
+                            <option>
+                              Selecciona {field.label.toLowerCase()}
+                            </option>
+                          </select>
+                        ) : (
+                          <input
+                            type={field.type}
+                            className="form-control rounded-pill"
+                            id={field.name}
+                            placeholder={`Escribe ${field.label.toLowerCase()}`}
+                          />
+                        )}
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </form>
               </div>
               <div

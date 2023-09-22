@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./login.css";
+import "./Login.css";
 
 function Login() {
   return (
@@ -59,6 +59,7 @@ function Login() {
                   </label>
                   <input
                     type="password"
+                    id="exampleInputPassword"
                     className="form-control rounded-pill mb-4"
                     placeholder="••••••••••••"
                   />

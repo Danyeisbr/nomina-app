@@ -1,0 +1,9 @@
+.btn-hover:hover {
+    background-color: #3834ec;
+    border-color: #3834ec;
+    color: white;
+}
+
+.custom-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+}
